@@ -27,7 +27,7 @@ jobs:
       env:
       - NODE_VERSION=8-jessie
       - NPM_TARGET=test
-   - stage: npm_targets
+    - stage: npm_targets
       name: "Test 8-jessie"
       install: skip
       script:
@@ -35,7 +35,7 @@ jobs:
       env:
       - NODE_VERSION=8-jessie
       - NPM_TARGET=lint
-   - stage: npm_targets
+    - stage: npm_targets
       name: "Test 8-jessie"
       install: skip
       script:
@@ -51,7 +51,7 @@ jobs:
         env:
         - NODE_VERSION=10-jessie
         - NPM_TARGET=test
-     - stage: npm_targets
+    - stage: npm_targets
         name: "Test 10-jessie"
         install: skip
         script:
@@ -59,7 +59,7 @@ jobs:
         env:
         - NODE_VERSION=10-jessie
         - NPM_TARGET=lint
-     - stage: npm_targets
+    - stage: npm_targets
         name: "Test 10-jessie"
         install: skip
         script:
