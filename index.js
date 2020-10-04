@@ -30,7 +30,7 @@ module.exports = app => {
     registers: [register]
   })
 
-  router.get('/metrics', (req, res) => {
+ router.get('/metrics', (req, res) => {
     app.log('GET -> metrics called.')
     res.set('Content-Type', register.contentType)
     res.end(register.metrics())
@@ -42,7 +42,6 @@ module.exports = app => {
 
     res.send('Counter reset ' + new Date())
   })
-
   // Ping router
   router.get('/ping', (req, res) => {
     res.send('pong')
@@ -90,7 +89,7 @@ module.exports = app => {
     repository_full_name: context.payload.repository.full_name, // repository.full_name
     repository_name: context.payload.repository.name
   }
-  const duration = new Date(context.payload.check_run.completed_at) - new             Date(context.payload.check_run.started_at)
+  const duration = new Date(context.payload.check_run.completed_at) - new Date(context.payload.check_run.started_at)
 
   app.log('observation.action -> ' + observation.action)
   app.log('observation.name -> ' + observation.name)
